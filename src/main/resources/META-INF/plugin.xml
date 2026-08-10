@@ -1,19 +1,28 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.stboyden.intellijblackmetalthemes</id>
-    <name>intellij-black-metal-themes</name>
-    <vendor>stboyden</vendor>
+    <id>com.stboyden.intellijblackmetalthemes</id>
+    <name>Black Metal Themes</name>
+    <vendor url="https://github.com/STBoyden">Samuel Boyden</vendor>
+
     <description><![CDATA[
-        <p><b>intellij-black-metal-themes</b> is a repository that provides a pure template to make it easier to create a new plugin project.</p>
-        <p>The main goal of this template is to speed up the setup phase of plugin development for both new and experienced developers by preconfiguring the project scaffold and CI, linking to the proper documentation pages, and keeping everything organized.</p>
+        <p>Eleven dark IntelliJ themes ported from Black Metal for Zed.</p>
+        <p>Includes the base palette plus Bathory, Burzum, Dark Funeral, Gorgoroth, Immortal,
+        Khold, Marduk, Mayhem, Nile, and Venom variants. Each theme provides matching editor,
+        terminal, UI, and recoloured native IntelliJ icon palettes.</p>
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.stboyden.intellijblackmetalthemes.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.stboyden.intellijblackmetalthemes.startup.MyProjectActivity" />
+        <themeProvider id="4a988c78-6343-5d4b-b98a-9f7922986952" path="/themes/black-metal.theme.json"/>
+        <themeProvider id="164d2eeb-f403-5c17-a6e3-a6e4c22a696c" path="/themes/black-metal-bathory.theme.json"/>
+        <themeProvider id="a56a3772-61fc-5705-bde9-e19788cab3cf" path="/themes/black-metal-burzum.theme.json"/>
+        <themeProvider id="f27a3db8-1c59-5a04-97db-ae25a7d94e1a" path="/themes/black-metal-dark-funeral.theme.json"/>
+        <themeProvider id="577eff71-846a-5d0b-90ca-4801dd593450" path="/themes/black-metal-gorgoroth.theme.json"/>
+        <themeProvider id="8e51862f-88ba-548d-aec9-52710a93f1b2" path="/themes/black-metal-immortal.theme.json"/>
+        <themeProvider id="19115f7e-c428-5063-8b97-5a7b27fa80d3" path="/themes/black-metal-khold.theme.json"/>
+        <themeProvider id="2a9235d4-2cb4-5afa-ae04-10bfab586d3f" path="/themes/black-metal-marduk.theme.json"/>
+        <themeProvider id="73ab31e0-2894-53cd-9b8d-dec590163e38" path="/themes/black-metal-mayhem.theme.json"/>
+        <themeProvider id="4f8a2877-b2e1-5f16-91b7-2d547ac3b09d" path="/themes/black-metal-nile.theme.json"/>
+        <themeProvider id="3a035264-30ea-56f0-97e0-0be99f2cd9fb" path="/themes/black-metal-venom.theme.json"/>
     </extensions>
 </idea-plugin>

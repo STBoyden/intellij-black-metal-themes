@@ -4,4 +4,6 @@
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Eleven Black Metal Islands UI and editor themes ported from the Zed extension.
+- Palette-aware recolouring for native IntelliJ icons.
+- Reproducible theme generator.

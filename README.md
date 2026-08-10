@@ -1,45 +1,57 @@
-# intellij-black-metal-themes
+# Black Metal Themes for IntelliJ
 
-![Build](https://github.com/STBoyden/intellij-black-metal-themes/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+Dark themes for IntelliJ-based IDEs, ported
+from [Black Metal for Zed](https://codeberg.org/STBoyden/zed-black-metal-themes).
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [group](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml), [name](./src/main/resources/META-INF/plugin.xml), and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin [description](./src/main/resources/META-INF/plugin.xml) (see [Tips][docs:plugin-description]) and this README to describe what your plugin does.
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Variants
 
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+- Black Metal
+- Bathory
+- Burzum
+- Dark Funeral
+- Gorgoroth
+- Immortal
+- Khold
+- Marduk
+- Mayhem
+- Nile
+- Venom
+
+Each variant uses the IntelliJ 2026.2 Islands UI and includes matching UI, editor, console, and terminal colours.
+IntelliJ's native icons are retained and recoloured to the selected palette, preserving familiar file and action symbols.
+
+IntelliJ Platform 2026.2 or newer is required. Zed's Transparent and Blurred modes are omitted because IntelliJ does not
+support equivalent window effects. These themes port each Opaque palette.
 
 ## Installation
 
-- Using the IDE built-in plugin system:
+Build the plugin:
 
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-black-metal-themes"</kbd> >
-  <kbd>Install</kbd>
+```sh
+./gradlew buildPlugin
+```
 
-- Using JetBrains Marketplace:
+Then select **Settings > Plugins > ⚙ > Install Plugin from Disk** and open the ZIP from `build/distributions`.
 
-  Go to [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and install it by clicking the <kbd>Install to ...</kbd> button in case your IDE is running.
+Choose a theme under **Settings > Appearance & Behaviour > Appearance**.
 
-  You can also download the [latest release](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID/versions) from JetBrains Marketplace and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+## Development
 
-- Manually:
+Palette data and mappings live in [`scripts/generate_themes.py`](scripts/generate_themes.py). Regenerate all checked-in
+resources with:
 
-  Download the [latest release](https://github.com/STBoyden/intellij-black-metal-themes/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+```sh
+python3 scripts/generate_themes.py
+```
 
+Run a development IDE with:
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+```sh
+./gradlew runIde
+```
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+## Attribution
+
+The palettes come from the Black Metal terminal schemes distributed with [Ghostty](https://ghostty.org/) and are adapted
+from the matching Zed extension. Native IntelliJ icons remain JetBrains assets and are recoloured through IntelliJ's
+theme API rather than redistributed.
