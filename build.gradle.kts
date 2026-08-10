@@ -15,4 +15,8 @@ intellijPlatform {
             sinceBuild = "262"
         }
     }
+
+    publishing {
+        hidden = true
+    }
 }
