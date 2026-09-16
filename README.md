@@ -3,6 +3,10 @@
 Dark themes for IntelliJ-based IDEs, ported
 from [Black Metal for Zed](https://codeberg.org/STBoyden/zed-black-metal-themes).
 
+## AI usage
+
+This repository was generated largely with use from GPT-5.6-Sol. You can see my personal AI-use policy [here](https://codeberg.org/STBoyden/ai-use).
+
 ## Variants
 
 - Black Metal
